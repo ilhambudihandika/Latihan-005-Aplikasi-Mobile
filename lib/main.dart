@@ -13,12 +13,24 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Aplikasi Mahasiswa',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.green,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.green,
+          foregroundColor: Colors.white,
+        ),
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Aplikasi Mahasiswa'),
         ),
         body: const Center(
-          child: Text('Ilham Budi Handika'),
+          child: Text(
+            'Ilham Budi Handika',
+            style: TextStyle(fontSize: 18),
+          ),
         ),
       ),
     );
